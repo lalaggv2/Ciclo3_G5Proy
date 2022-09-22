@@ -8,26 +8,29 @@
   <title>Clientes</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="js/funciones.js"></script>
+  <link href="styles/styles.css" rel="stylesheet">
 </head>
 
 <body>
   <a href="index.html">Inicio</a>
   <h1>Clientes</h1>
   <h2>Tabla Clientes</h2>
-  <div id="resultadoCliente"> </div>
+  <table>
+    <tbody id="resultadoCliente"> </tbody>
+  </table>
   <p><button onclick="Hotel.traerCliente()">Consultar</button></p>
   <div>
 
-    <form action="js/funciones.js">
+    <form>
       <p>Formulario Clientes</p>
       <p><input type="number" id="id" placeholder="Id"></p>
-      <p><input type="text" name="name" placeholder="Name"></p>
-      <p><input type="text" email="email" placeholder="Email"></p>
-      <p><input type="number" age="age" placeholder="Age"></p>
+      <p><input type="text" id="name" placeholder="Name"></p>
+      <p><input type="text" id="email" placeholder="Email"></p>
+      <p><input type="number" id="age" placeholder="Age"></p>
     </form>
-    <button>Guardar</button>
-    <button>Actualizar</button>
-
+    <button onclick="Hotel.crearCliente()">Guardar</button>
+    <button onclick="Hotel.actualizarCliente()">Actualizar</button>
+    <button onclick="Hotel.eliminarCliente()">Eliminar</button>
 
 
   </div>
